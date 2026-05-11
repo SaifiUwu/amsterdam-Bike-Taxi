@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amsterdam Bike Taxi | Premium Rickshaw Tours</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/animations.css">
+</head>
+<body class="bg-bg-primary text-text-primary antialiased">
+
+        <header class="fixed w-full z-50 flex items-center justify-between px-6 md:px-10 py-4 transition-all duration-300 bg-transparent">
+        <div class="text-xl md:text-2xl font-bold tracking-tight text-white flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+            <span class="font-heading text-[#ca4848] text-lg md:text-2xl">AMSTERDAM BIKE TAXI</span>
+        </div>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-[#0e0e0e]">
+            <a href="index.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Home</a>
+            <a href="tours.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Tours</a>
+            <a href="services.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Services</a>
+            <a href="gallery.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Gallery</a>
+            <a href="our-network.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Network</a>
+            <a href="contact.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Contact</a>
+        </nav>
+        <button class="hidden md:block bg-accent-gold hover:bg-accent-hover text-white px-8 py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors font-heading shadow-md min-h-[48px]" onclick="window.location.href='services.html#book'">Book Now →</button>
+        
+        <!-- Mobile Hamburger Button -->
+        <button id="open-menu" class="md:hidden text-white hover:text-accent-gold focus:outline-none min-h-[48px] min-w-[48px] flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0f1f15]/95 z-[100] translate-x-full transition-transform duration-300 flex flex-col pt-24 px-6 md:hidden">
+        <button id="close-menu" class="absolute top-6 right-6 text-white text-4xl hover:text-accent-gold">&times;</button>
+        <nav class="flex flex-col gap-6 text-xl font-bold uppercase tracking-widest text-center">
+            <a href="index.html" class="text-white hover:text-accent-gold transition-colors py-3">Home</a>
+            <a href="tours.html" class="text-white hover:text-accent-gold transition-colors py-3">Tours</a>
+            <a href="services.html" class="text-white hover:text-accent-gold transition-colors py-3">Services</a>
+            <a href="gallery.html" class="text-white hover:text-accent-gold transition-colors py-3">Gallery</a>
+            <a href="about.html" class="text-white hover:text-accent-gold transition-colors py-3">About Us</a>
+            <a href="gallery.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Gallery</a>
+            <a href="our-network.html" class="text-white hover:text-accent-gold transition-colors py-3">Our Network</a>
+            <a href="contact.html" class="text-white hover:text-accent-gold transition-colors py-3">Contact</a>
+            <button class="bg-accent-gold hover:bg-accent-hover text-black px-8 py-4 rounded font-bold uppercase text-sm tracking-widest transition-colors font-heading mt-6 shadow-md w-full" onclick="window.location.href='services.html#book'; document.getElementById('close-menu').click();">Book Now</button>
+        </nav>
+    </div>
+
+
+    <main>
+        <section class="h-screen flex items-center justify-center text-center relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover opacity-80" alt="Amsterdam Canal">
+                <div class="absolute inset-0 hero-overlay"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl px-6 fade-in-up text-white" style="animation-delay: 0.2s">
+                <h1 class="text-6xl md:text-7xl font-extrabold mb-6 font-heading">EXPERIENCE AMSTERDAM <br/><span class="text-accent-gold">LIKE NEVER BEFORE</span></h1>
+                <p class="text-xl text-white font-medium tracking-wide mb-8 typewriter h-8"> </p>
+                <div class="flex gap-4 justify-center">
+                    <button class="bg-accent-gold hover:bg-accent-hover text-black px-10 py-4 rounded font-bold uppercase text-sm tracking-widest font-heading" onclick="window.location.href='services.html#book'">Book Your Ride</button>
+                    <button class="border-2 border-accent-gold text-white hover:bg-accent-gold  px-10 py-4 rounded font-bold uppercase text-sm tracking-widest font-heading" onclick="window.location.href='tours.html'">View Tours ↓</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Bar -->
+        <section class="relative -mt-16 z-20 container mx-auto px-6">
+            <div class="bg-white/95 backdrop-blur-md border border-border rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-border">
+                <div class="flex-1 p-8 text-center flex flex-col items-center justify-center hover:bg-black/5 transition-colors duration-300">
+                    <span class="text-4xl mb-4 text-accent-gold block drop-shadow-sm">⭐</span>
+                    <h3 class="font-bold text-lg mb-1 text-black">Top Rated</h3>
+                    <p class="text-text-secondary text-sm font-medium">4.8★ on all major platforms</p>
+                </div>
+                <div class="flex-1 p-8 text-center flex flex-col items-center justify-center hover:bg-black/5 transition-colors duration-300">
+                    <span class="text-4xl mb-4 text-accent-green block drop-shadow-sm">🌿</span>
+                    <h3 class="font-bold text-lg mb-1 text-black">100% Eco-Friendly</h3>
+                    <p class="text-text-secondary text-sm font-medium">Electric & zero emissions</p>
+                </div>
+                <div class="flex-1 p-8 text-center flex flex-col items-center justify-center hover:bg-black/5 transition-colors duration-300">
+                    <span class="text-4xl mb-4 text-accent-gold block drop-shadow-sm">🏙️</span>
+                    <h3 class="font-bold text-lg mb-1 text-black">Local Experts</h3>
+                    <p class="text-text-secondary text-sm font-medium">Passionate Amsterdam guides</p>
+                </div>
+            </div>
+        </section>
+    <!-- About Snippet -->
+        <section class="py-24 container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center animate-section">
+            <div class="relative">
+                <img src="https://images.squarespace-cdn.com/content/v1/69df98c11edc6e72a734353a/6e9bc48d-374b-4651-9851-fb4a9c7842a7/pedicab-bike-taxi.jpg" class="rounded-xl shadow-2xl object-cover h-[500px] w-full" alt="Amsterdam Canal Houses">
+                <div class="absolute -bottom-6 -right-6 bg-accent-gold text-white p-6 rounded-lg font-bold">Since 2024</div>
+            </div>
+            <div>
+                <div class="text-accent-gold font-bold tracking-widest uppercase mb-2 text-sm">About Us</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-[#ca4848]">Amsterdam's Most Loved Bike Taxi Service</h2>
+                <p class="text-text-secondary leading-relaxed mb-8 text-lg">
+                    We're a small team of local guides offering Private Rickshaw (fietstaxi) rides through the most beautiful corners of the city. Whether you're visiting for the first time or want to discover hidden gems, we're here to make your ride unforgettable. Zero emissions. Maximum charm.
+                </p>
+                <button class="bg-bg-card border border-border text-text-primary hover:bg-accent-gold hover:text-white px-8 py-3 rounded font-bold uppercase tracking-widest text-sm transition-colors" onclick="window.location.href='about.html'">Meet Our Team →</button>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="bg-bg-secondary py-24 animate-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-[#ca4848]">Our Services</h2>
+                    <p class="text-text-secondary">Designed for every type of traveler.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-bg-card p-8 rounded-xl border border-border card-glow card-hover">
+                        <div class="text-4xl mb-6">🗺️</div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">City Tours</h3>
+                            <span class="bg-accent-gold/20 text-accent-gold text-xs font-bold px-3 py-1 rounded">From €12</span>
+                        </div>
+                        <p class="text-text-secondary">Discover historic streets, monuments, canals, and neighborhoods in comfort. Our local guides make the city come alive.</p>
+                    </div>
+                    <div class="bg-bg-card p-8 rounded-xl border border-border card-glow card-hover">
+                        <div class="text-4xl mb-6">🌙</div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">Night Rides</h3>
+                            <span class="bg-accent-gold/20 text-accent-gold text-xs font-bold px-3 py-1 rounded">From €30</span>
+                        </div>
+                        <p class="text-text-secondary">Experience Amsterdam at dusk. Enchanting lit-up streets and serene canals on our romantic evening tours.</p>
+                    </div>
+                    <div class="bg-bg-card p-8 rounded-xl border border-border card-glow card-hover">
+                        <div class="text-4xl mb-6">👥</div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">Group Bookings</h3>
+                            <span class="bg-accent-gold/20 text-accent-gold text-xs font-bold px-3 py-1 rounded">Custom</span>
+                        </div>
+                        <p class="text-text-secondary">Traveling with friends or family? Our group tours are an easy, enjoyable way to share the Amsterdam experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tour Packages Preview -->
+        <section class="py-24 container mx-auto px-6 animate-section">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-[#ca4848]">Top Tour Packages</h2>
+                    <p class="text-text-secondary">Explore our most popular rides.</p>
+                </div>
+                <button class="hidden md:block border-2 border-accent-gold text-text-primary hover:bg-accent-gold hover:text-white px-6 py-2 rounded font-bold uppercase text-sm tracking-widest transition-colors" onclick="window.location.href='tours.html'">View All 12 Tours →</button>
+            </div>
+            <div class="flex overflow-x-auto gap-6 pb-8 snap-x scrollbar-hide">
+                <div class="min-w-[320px] flex-1 bg-bg-card border border-border rounded-xl snap-start overflow-hidden group shadow-lg hover:shadow-accent-gold/20 transition-all duration-300">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.squarespace-cdn.com/content/v1/69df98c11edc6e72a734353a/32751f84-c773-49be-ab89-26a25cadd481/photo-9-2025-07-12-01-59-06.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Amsterdam Streets">
+                        <div class="absolute top-4 right-4 bg-[#ca4848] text-white text-xs font-bold px-3 py-1 rounded-full shadow-md uppercase tracking-wide flex items-center gap-1">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            15-20 MIN
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Fun City Ride</h3>
+                        <div class="flex items-end gap-2 mb-4">
+                            <span class="text-3xl font-bold font-heading text-white">€12</span>
+                            <span class="text-text-muted text-sm mb-1 uppercase tracking-widest font-bold">/ Person</span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-sm text-text-secondary">
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Quick city spin</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Perfect for kids</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Local driver guide</li>
+                        </ul>
+                        <button class="w-full bg-white/5 border border-white/10 hover:border-accent-gold text-white hover:bg-accent-gold hover:text-black py-4 rounded font-bold transition-all duration-300 uppercase tracking-widest text-sm shadow-md" onclick="window.location.href='services.html#book'">Book Now</button>
+                    </div>
+                </div>
+                <div class="min-w-[320px] flex-1 bg-bg-card border border-border rounded-xl snap-start overflow-hidden group shadow-lg hover:shadow-accent-gold/20 transition-all duration-300">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.squarespace-cdn.com/content/v1/69df98c11edc6e72a734353a/2614a1bb-6677-4e0f-90e2-c5c4a3e87a84/pedicab-bike-taxi+%286%29.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Rijksmuseum">
+                        <div class="absolute top-4 right-4 bg-accent-gold text-black text-xs font-bold px-3 py-1 rounded-full shadow-md uppercase tracking-wide flex items-center gap-1">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                            MOST POPULAR
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Old Town History</h3>
+                        <div class="flex items-end gap-2 mb-4">
+                            <span class="text-3xl font-bold font-heading text-white">€25</span>
+                            <span class="text-text-muted text-sm mb-1 uppercase tracking-widest font-bold">/ Person</span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-sm text-text-secondary">
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 40+ Minutes</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Best intro to Amsterdam</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 12 Landmark sites</li>
+                        </ul>
+                        <button class="w-full bg-accent-gold text-black hover:bg-yellow-500 py-4 rounded font-bold transition-all duration-300 uppercase tracking-widest text-sm shadow-[0_0_15px_rgba(229,192,123,0.3)] hover:shadow-[0_0_20px_rgba(229,192,123,0.5)] transform hover:-translate-y-1" onclick="window.location.href='services.html#book'">Book Now</button>
+                    </div>
+                </div>
+                <div class="min-w-[320px] flex-1 bg-bg-card border border-border rounded-xl snap-start overflow-hidden group shadow-lg hover:shadow-accent-gold/20 transition-all duration-300">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.squarespace-cdn.com/content/v1/69df98c11edc6e72a734353a/a7638db2-6fd4-43d0-b684-cc7a294f35bc/Amsterdam-Trading-Blog-scaled.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Romantic">
+                        <div class="absolute top-4 right-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md uppercase tracking-wide flex items-center gap-1">
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                            ROMANTIC
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Romantic Evening</h3>
+                        <div class="flex items-end gap-2 mb-4">
+                            <span class="text-3xl font-bold font-heading text-white">€30</span>
+                            <span class="text-text-muted text-sm mb-1 uppercase tracking-widest font-bold">/ Person</span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-sm text-text-secondary">
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Scenic canal views</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Cozy blankets included</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Perfect for couples</li>
+                        </ul>
+                        <button class="w-full bg-white/5 border border-white/10 hover:border-accent-gold text-white hover:bg-accent-gold hover:text-black py-4 rounded font-bold transition-all duration-300 uppercase tracking-widest text-sm shadow-md" onclick="window.location.href='services.html#book'">Book Now</button>
+                    </div>
+                </div>
+                <div class="min-w-[320px] flex-1 bg-bg-card border border-border rounded-xl snap-start overflow-hidden group shadow-lg hover:shadow-accent-gold/20 transition-all duration-300">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.squarespace-cdn.com/content/v1/69df98c11edc6e72a734353a/4c92aa5e-983a-40f4-8daf-08ff2fd39b96/photo-3-2025-07-10-18-48-32.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Windmill">
+                        <div class="absolute top-4 right-4 bg-accent-green text-white text-xs font-bold px-3 py-1 rounded-full shadow-md uppercase tracking-wide flex items-center gap-1">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            1h 10 MIN
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Old Town Extended</h3>
+                        <div class="flex items-end gap-2 mb-4">
+                            <span class="text-3xl font-bold font-heading text-white">€35</span>
+                            <span class="text-text-muted text-sm mb-1 uppercase tracking-widest font-bold">/ Person</span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-sm text-text-secondary">
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> The complete experience</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Cover everything</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Photo stops included</li>
+                        </ul>
+                        <button class="w-full bg-white/5 border border-white/10 hover:border-accent-gold text-white hover:bg-accent-gold hover:text-black py-4 rounded font-bold transition-all duration-300 uppercase tracking-widest text-sm shadow-md" onclick="window.location.href='services.html#book'">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <button class="w-full md:hidden border-2 border-accent-gold text-text-primary hover:bg-accent-gold hover:text-white py-3 rounded font-bold uppercase text-sm tracking-widest mt-4 transition-colors" onclick="window.location.href='tours.html'">View All Tours →</button>
+        </section>
+
+        <!-- Feature Area -->
+        <section class="py-24 container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center animate-section pb-12">
+            <div class="order-2 md:order-1">
+                <div class="text-accent-green font-bold tracking-widest uppercase mb-2 text-sm">Save the Planet</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-[#ca4848]">Explore Without the Footprint</h2>
+                <p class="text-text-secondary leading-relaxed mb-6 text-lg">
+                    Amsterdam is famous for its clean air and cycling culture. Our electric rickshaws fit perfectly into this ecosystem giving you zero-emission mobility combined with premium comfort. 
+                </p>
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="flex flex-col gap-1 border-l-2 border-accent-green pl-4">
+                        <span class="text-2xl font-bold">100%</span>
+                        <span class="text-text-muted text-sm uppercase">Electric</span>
+                    </div>
+                    <div class="flex flex-col gap-1 border-l-2 border-accent-green pl-4">
+                        <span class="text-2xl font-bold">0g</span>
+                        <span class="text-text-muted text-sm uppercase">CO2 Emissions</span>
+                    </div>
+                </div>
+                <button class="bg-accent-green text-white hover:bg-green-600 px-8 py-3 rounded font-bold uppercase tracking-widest text-sm transition-colors" onclick="window.location.href='services.html'">Learn More →</button>
+            </div>
+            <div class="relative order-1 md:order-2">
+                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=250,fit=crop,q=95/YD0BRDXbbvcaOQvY/ecotaxi2-mnlqR3DGgZfbMVx1.png" class="rounded-xl shadow-2xl object-cover h-[500px] w-full" alt="Eco Green Nature">
+                <div class="absolute -bottom-6 -left-6 bg-bg-card p-4 rounded-lg border border-border shadow-2xl flex items-center gap-4">
+                    <div class="text-4xl">🌱</div>
+                    <div>
+                        <div class="font-bold text-lg">Eco-Certified</div>
+                        <div class="text-text-muted text-sm">Green tourism</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Break -->
+        <section class="h-[500px] w-full relative animate-section my-12">
+            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/YD0BRDXbbvcaOQvY/img_2795_1-AQExEQMRELCZQ0G0.jpg" class="w-full h-full object-cover opacity-70" alt="Group Friends Travel">
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <div class="text-center px-6 max-w-3xl">
+                    <h2 class="text-5xl font-extrabold mb-6 font-heading drop-shadow-md text-[#ca4848]">Perfect for Groups & Events</h2>
+                    <p class="text-lg md:text-xl text-white font-medium drop-shadow-md mb-8">Whether it's a bachelor party, a corporate team event, or a family gathering, our fleet of rickshaws can accommodate everyone.</p>
+                    <button class="bg-accent-gold hover:bg-accent-hover text-black px-10 py-4 rounded font-bold uppercase text-sm tracking-widest font-heading transition-transform hover:scale-105" onclick="window.location.href='contact.html'">Book a Group Tour</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="bg-bg-secondary py-24 animate-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-16 text-[#ca4848]">Why Choose Us</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl bg-bg-card p-3 rounded-lg border border-border">🌿</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">100% Eco-Friendly</h3>
+                            <p class="text-text-secondary text-sm">Zero emission electric bikes</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl bg-bg-card p-3 rounded-lg border border-border">🗣️</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Multilingual Guides</h3>
+                            <p class="text-text-secondary text-sm">English, Dutch, Spanish, Italian</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl bg-bg-card p-3 rounded-lg border border-border">♿</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Mobility Friendly</h3>
+                            <p class="text-text-secondary text-sm">Special tours for seniors</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl bg-bg-card p-3 rounded-lg border border-border">💑</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Romantic Tours</h3>
+                            <p class="text-text-secondary text-sm">Perfect for couples & anniversaries</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl bg-bg-card p-3 rounded-lg border border-border">🏢</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Corporate Bookings</h3>
+                            <p class="text-text-secondary text-sm">Team outings & events</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl bg-bg-card p-3 rounded-lg border border-border">📱</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Easy App Booking</h3>
+                            <p class="text-text-secondary text-sm">Book from your phone instantly</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="py-24 container mx-auto px-6 text-center animate-section overflow-hidden">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Happy Travelers</h2>
+                <p class="text-accent-gold font-bold text-lg">⭐ 4.8/5 Rating <span class="text-text-secondary font-normal text-sm ml-2">(856+ Reviews)</span></p>
+            </div>
+            <div class="bg-bg-card border border-border p-8 rounded-xl max-w-2xl mx-auto relative cursor-pointer group card-glow line-clamp-3">
+                <div class="text-text-secondary italic mb-6 text-lg">"Absolutely the best way to see Amsterdam. Our guide was incredibly knowledgeable and the rickshaw was very comfortable even over the cobblestones."</div>
+                <div class="flex items-center justify-center gap-3">
+                    <div class="w-10 h-10 bg-accent-gold rounded-full flex items-center justify-center text-black font-bold">JD</div>
+                    <div class="text-left">
+                        <h4 class="font-bold">John Doe</h4>
+                        <p class="text-xs text-text-muted">🇨🇦 Canada</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Teaser -->
+        <section class="py-24 bg-bg-secondary animate-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">A Glimpse of the Ride</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                    <div class="overflow-hidden rounded-lg"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/YD0BRDXbbvcaOQvY/generated/generated-Yg2j2WxbObs1pbV7.png" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" alt="Amsterdam Streets"></div>
+                    <div class="overflow-hidden rounded-lg"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=606,h=304,fit=crop/YD0BRDXbbvcaOQvY/img_1928-A85e5q3R9JirgpE5.jpg" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" alt="Bridge Evening"></div>
+                    <div class="overflow-hidden rounded-lg"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=328,h=224,fit=crop/YD0BRDXbbvcaOQvY/img_1928-A85e5q3R9JirgpE5.jpg" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" alt="Romantic"></div>
+                    <div class="overflow-hidden rounded-lg"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=606,h=304,fit=crop/YD0BRDXbbvcaOQvY/img_2270-m5KMKp7q6LTxpO8Z.jpg" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" alt="Museum"></div>
+                </div>
+                <div class="text-center">
+                    <button class="border-2 border-accent-gold text-text-primary hover:bg-accent-gold hover:text-white px-8 py-3 rounded font-bold uppercase tracking-widest text-sm transition-colors" onclick="window.location.href='gallery.html'">Explore Full Gallery →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="py-20 animate-section gradient-cta">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Ready to Explore Amsterdam?</h2>
+                <p class="text-xl text-text-secondary mb-10 max-w-2xl mx-auto">Book your eco-friendly rickshaw tour today — starting from just €12</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button class="bg-accent-gold hover:bg-accent-hover text-black px-10 py-4 rounded font-bold uppercase tracking-widest text-sm transition-colors w-full sm:w-auto" onclick="window.location.href='services.html#book'">Book Now →</button>
+                    <a href="tel:+31612977991" class="border-2 border-accent-gold text-text-primary hover:bg-accent-gold hover:text-white px-10 py-4 rounded font-bold uppercase tracking-widest text-sm transition-colors w-full sm:w-auto text-center inline-block">Call: +31 612 977 991</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- Footer -->
+    <footer class="bg-[#0f1f15] border-t border-accent-gold/20 pt-20 pb-8 relative overflow-hidden text-gray-300">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-green/5 rounded-full blur-[100px] -z-10 transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent-gold/5 rounded-full blur-[120px] -z-10 transform -translate-x-1/2 translate-y-1/3 pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 border-b border-white/10 pb-16 mb-8 relative z-10">
+            <!-- Brand Section -->
+            <div class="flex flex-col">
+                <div class="text-2xl font-bold tracking-tight text-white flex items-center gap-3 mb-6 group cursor-pointer" onclick="window.location.href='index.html'">
+                    <span class="text-3xl group-hover:scale-110 transition-transform duration-300">🛺</span>
+                    <span class="font-heading text-xl tracking-wider group-hover:text-accent-gold transition-colors duration-300 text-white">AMSTERDAM BIKE TAXI</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm">
+                    Experience Amsterdam the green way. We provide premium, eco-friendly rickshaw tours and taxi services, creating unforgettable memories since 2024. Zero emissions, maximum charm.
+                </p>
+                <!-- Social Links -->
+                <div class="flex items-center gap-4">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#1877F2] hover:text-white hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-[#1877F2]/30">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/amsterdambiketaxi" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-[#dc2743]/30">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://wa.me/31612977991" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#25D366] hover:text-white hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-[#25D366]/30">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-2.32 0-4.591 1.255-4.591 3.945 0 1.154.338 2.304 1.04 3.123l-1.003 3.656 3.748-0.982c.772.419 1.629.641 2.504.641 2.32 0 4.591-1.255 4.591-3.945 0-2.689-2.27-3.938-4.289-3.938zm3.62 5.92c-.06.18-.323.33-.513.353-.18.02-.41.033-.673-.053-.33-.11-.75-.28-1.21-.49-.86-.38-1.41-1.25-1.45-1.3-.04-.05-.33-.44-.33-.84s.21-.6.28-.68c.07-.08.16-.1.21-.1s.11 0 .16.01c.05 0 .12-.02.19.14.07.16.24.58.26.63s.03.11 0 .16c-.03.05-.05.11-.12.2-.07.09-.15.2-.21.27-.07.08-.14.17-.06.31.08.14.35.58.75.94.51.45.94.59 1.08.66.14.07.22.06.3-.03.08-.09.34-.39.43-.53.09-.14.18-.12.3-.08s.77.36.9.43c.13.07.22.1.25.15.03.05.03.29-.07.47z"/></svg>
+                    </a>
+                </div>
+                
+                                <!-- Trust Badges -->
+                <div class="mt-8 flex flex-wrap items-center gap-4">
+                    <div class="flex flex-col gap-1 items-center bg-white/5 border border-white/10 rounded-lg py-2 px-3 hover:bg-white/10 transition-colors shadow-lg hover:shadow-accent-gold/10">
+                        <div class="text-accent-gold text-[10px] tracking-widest font-black flex gap-[2px]">
+                            <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-white/90">Top Rated</span>
+                    </div>
+                    <div class="flex flex-col gap-1 items-center bg-white/5 border border-white/10 rounded-lg py-2 px-3 hover:bg-white/10 transition-colors shadow-lg hover:shadow-accent-green/10">
+                        <div class="text-accent-green text-[10px] flex items-center">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-white/90">Eco-Certified</span>
+                    </div>
+                    <div class="flex flex-col gap-1 items-center bg-white/5 border border-white/10 rounded-lg py-2 px-3 hover:bg-white/10 transition-colors shadow-lg hover:shadow-[#ca4848]/10">
+                        <div class="text-[#ca4848] text-[10px]">
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        </div>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-white/90">Local Team</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="lg:ml-auto md:-ml-8 lg:ml-0">
+                <h4 class="font-bold uppercase tracking-widest text-sm mb-6 text-white flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-gold"></span> Explore
+                </h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="index.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Home</a></li>
+                    <li><a href="tours.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">All Tours</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Services</a></li>
+                    <li><a href="gallery.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Gallery</a></li>
+                    <li><a href="blog.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Blog / News</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">About Us</a></li>
+                    <li class="pt-2"><a href="app.html" class="inline-flex items-center gap-2 text-accent-green hover:text-white font-medium hover:translate-x-1 transition-all duration-300 group"><svg class="w-4 h-4 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg> Download User App</a></li>
+                </ul>
+            </div>
+
+            <!-- Top Tours -->
+            <div>
+                <h4 class="font-bold uppercase tracking-widest text-sm mb-6 text-white flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-green"></span> Popular Rides
+                </h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="historical-center.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Historical Center Tour</a></li>
+                    <li><a href="romantic-tours.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Romantic Evening Ride</a></li>
+                    <li><a href="city-tours.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">City Highlights</a></li>
+                    <li><a href="tours.html#prices" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Group Custom Tours</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Wedding Services</a></li>
+                    <li><a href="gallery.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Gallery</a>
+            <a href="our-network.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Become a Driver</a></li>
+                    <li class="pt-2"><a href="tours.html#prices" class="inline-block px-5 py-2 mt-2 border border-accent-gold/40 text-accent-gold rounded hover:bg-accent-gold hover:text-[#111111] transition-all duration-300 shadow-[0_0_15px_rgba(229,192,123,0.1)] hover:shadow-[0_0_20px_rgba(229,192,123,0.4)] text-xs font-bold uppercase tracking-wider">Book Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-bold uppercase tracking-widest text-sm mb-6 text-white flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-gold"></span> Get in Touch
+                </h4>
+                <ul class="space-y-5 text-sm mb-8 text-gray-400">
+                    <li>
+                        <a href="https://maps.google.com/?q=Koningsplein+7-9,+1017+BB+Amsterdam" target="_blank" rel="noopener noreferrer" class="flex gap-4 hover:text-white transition-colors duration-300 group">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-accent-gold group-hover:bg-accent-gold group-hover:text-[#0f1f15] transition-all duration-300 shrink-0">📍</div>
+                            <span class="leading-relaxed block pt-1">Koningsplein 7-9, 1017 BB<br>Amsterdam, Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+31612977991" class="flex items-center gap-4 hover:text-white transition-colors duration-300 group">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-accent-gold group-hover:bg-accent-gold group-hover:text-[#0f1f15] transition-all duration-300 shrink-0">📞</div>
+                            <span class="font-medium text-white group-hover:text-accent-gold transition-colors">+31 612 977 991</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:Amsterdam.Rickshaw.tours@gmail.com" class="flex items-center gap-4 hover:text-white transition-colors duration-300 group">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-accent-gold group-hover:bg-accent-gold group-hover:text-[#0f1f15] transition-all duration-300 shrink-0">📧</div>
+                            <span class="break-all font-medium pt-1">Amsterdam.Rickshaw.tours<br>@gmail.com</span>
+                        </a>
+                    </li>
+                    <li class="flex items-center gap-4 group hover:text-white transition-colors duration-300">
+                        <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-accent-green group-hover:bg-accent-green group-hover:text-white transition-all duration-300 shrink-0">🕐</div>
+                        <span class="pt-1">Mon–Sun: 8:00 AM – 6:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="border-t border-white/5 mt-4">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500 relative z-10 py-6">
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left">
+                    <p>&copy; <span id="current-year"></span> Amsterdam Bike Taxi. All rights reserved.</p>
+                    <span class="hidden md:inline text-white/10">|</span>
+                    <p class="flex items-center gap-1">Designed with <span class="text-accent-gold text-lg leading-none animate-pulse">&hearts;</span></p>
+                </div>
+                <div class="flex gap-6 font-medium">
+                    <a href="gallery.html" class="hover:text-accent-gold transition-colors duration-300">Gallery</a>
+                    <a href="privacy-policy.html" class="hover:text-accent-gold transition-colors duration-300">Privacy Policy</a>
+                    <a href="privacy-policy.html" class="hover:text-accent-gold transition-colors duration-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
+    <a href="https://wa.me/31612977991" class="fixed bottom-6 right-6 w-14 h-14 bg-accent-green rounded-full flex items-center justify-center shadow-xl shadow-accent-green/20 z-50 pulsing">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-2.32 0-4.591 1.255-4.591 3.945 0 1.154.338 2.304 1.04 3.123l-1.003 3.656 3.748-0.982c.772.419 1.629.641 2.504.641 2.32 0 4.591-1.255 4.591-3.945 0-2.689-2.27-3.938-4.289-3.938zm3.62 5.92c-.06.18-.323.33-.513.353-.18.02-.41.033-.673-.053-.33-.11-.75-.28-1.21-.49-.86-.38-1.41-1.25-1.45-1.3-.04-.05-.33-.44-.33-.84s.21-.6.28-.68c.07-.08.16-.1.21-.1s.11 0 .16.01c.05 0 .12-.02.19.14.07.16.24.58.26.63s.03.11 0 .16c-.03.05-.05.11-.12.2-.07.09-.15.2-.21.27-.07.08-.14.17-.06.31.08.14.35.58.75.94.51.45.94.59 1.08.66.14.07.22.06.3-.03.08-.09.34-.39.43-.53.09-.14.18-.12.3-.08s.77.36.9.43c.13.07.22.1.25.15.03.05.03.29-.07.47z"/></svg>
+    </a>
+
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Amsterdam Bike Taxi",
+  "description": "Premium dark-themed Amsterdam pedicab tour experience",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}

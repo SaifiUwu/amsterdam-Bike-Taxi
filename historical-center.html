@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Center | Amsterdam Bike Taxi</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/animations.css">
+</head>
+<body class="bg-bg-primary text-text-primary antialiased">
+
+        <header class="fixed w-full z-50 flex items-center justify-between px-6 md:px-10 py-4 transition-all duration-300 bg-transparent">
+        <div class="text-xl md:text-2xl font-bold tracking-tight text-white flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+            <span class="font-heading text-[#ca4848] text-lg md:text-2xl">AMSTERDAM BIKE TAXI</span>
+        </div>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-[#0e0e0e]">
+            <a href="index.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Home</a>
+            <a href="tours.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Tours</a>
+            <a href="services.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Services</a>
+            <a href="gallery.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Gallery</a>
+            <a href="our-network.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Network</a>
+            <a href="contact.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Contact</a>
+        </nav>
+        <button class="hidden md:block bg-accent-gold hover:bg-accent-hover text-white px-8 py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors font-heading shadow-md min-h-[48px]" onclick="window.location.href='services.html#book'">Book Now →</button>
+        
+        <!-- Mobile Hamburger Button -->
+        <button id="open-menu" class="md:hidden text-white hover:text-accent-gold focus:outline-none min-h-[48px] min-w-[48px] flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0f1f15]/95 z-[100] translate-x-full transition-transform duration-300 flex flex-col pt-24 px-6 md:hidden">
+        <button id="close-menu" class="absolute top-6 right-6 text-white text-4xl hover:text-accent-gold">&times;</button>
+        <nav class="flex flex-col gap-6 text-xl font-bold uppercase tracking-widest text-center">
+            <a href="index.html" class="text-white hover:text-accent-gold transition-colors py-3">Home</a>
+            <a href="tours.html" class="text-white hover:text-accent-gold transition-colors py-3">Tours</a>
+            <a href="services.html" class="text-white hover:text-accent-gold transition-colors py-3">Services</a>
+            <a href="gallery.html" class="text-white hover:text-accent-gold transition-colors py-3">Gallery</a>
+            <a href="about.html" class="text-white hover:text-accent-gold transition-colors py-3">About Us</a>
+            <a href="gallery.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Gallery</a>
+            <a href="our-network.html" class="text-white hover:text-accent-gold transition-colors py-3">Our Network</a>
+            <a href="contact.html" class="text-white hover:text-accent-gold transition-colors py-3">Contact</a>
+            <button class="bg-accent-gold hover:bg-accent-hover text-black px-8 py-4 rounded font-bold uppercase text-sm tracking-widest transition-colors font-heading mt-6 shadow-md w-full" onclick="window.location.href='services.html#book'; document.getElementById('close-menu').click();">Book Now</button>
+        </nav>
+    </div>
+
+
+    <main class="pt-32 pb-24">
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-6 mb-20 flex flex-col md:flex-row items-center gap-12 animate-section">
+            <div class="md:w-1/2">
+                <span class="text-accent-gold font-bold tracking-widest uppercase text-sm mb-2 block">Historical Center</span>
+                <h1 class="text-5xl md:text-6xl font-bold font-heading mb-6 tracking-tight leading-tight">400 Years of Amsterdam History.<br>One Unforgettable Ride.</h1>
+                <p class="text-text-secondary text-lg mb-8">From the Golden Age to World War II — your local guide brings Amsterdam's most powerful stories to life from the open seat of a private electric pedicab.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/31612977991" class="bg-accent-gold hover:bg-yellow-500 text-black px-8 py-3 rounded font-bold uppercase tracking-widest text-center transition-colors">Book Now →</a>
+                    <a href="https://wa.me/31612977991" class="border border-accent-gold text-accent-gold hover:bg-accent-gold hover:text-black px-8 py-3 rounded font-bold uppercase tracking-widest text-center transition-colors">WhatsApp</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <div class="rounded-2xl overflow-hidden shadow-2xl relative border border-border">
+                    <div class="absolute top-4 right-4 bg-bg-secondary backdrop-blur-md px-4 py-2 rounded-full border border-border z-10 flex items-center gap-2">
+                        <span class="text-accent-gold">★</span>
+                        <span class="font-bold">4.8</span>
+                        <span class="text-sm text-text-secondary ml-1">/ 850+ reviews</span>
+                    </div>
+                    <img src="https://images.squarespace-cdn.com/content/v1/69df98c11edc6e72a734353a/cd222414-12de-4673-a6a2-e0da8dd37ee7/471145796_122161374386287050_5304349100081207043_n.jpg" alt="Historical Tour" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Historical Tour Packages -->
+        <section class="py-12 max-w-6xl mx-auto px-6 animate-section mb-20">
+            <h2 class="text-4xl font-bold font-heading mb-12 text-center">Historical Tour Packages</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- Package 1 -->
+                <div class="bg-bg-card rounded-2xl border border-border overflow-hidden flex flex-col transition-transform hover:-translate-y-1 hover:border-accent-gold shadow-lg">
+                    <div class="p-6 border-b border-border bg-bg-secondary">
+                        <div class="text-accent-gold text-xs font-bold uppercase tracking-widest mb-2">35 MIN</div>
+                        <h3 class="text-2xl font-bold mb-1">Old Town History</h3>
+                        <div class="text-3xl font-bold font-heading">€25<span class="text-sm font-normal text-text-secondary">/person</span></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <p class="text-text-secondary mb-6 flex-grow">Best intro to Amsterdam. Covers 12 landmarks. Good for: first timers, cruise passengers, anyone with limited time.</p>
+                        <a href="https://wa.me/31612977991" class="block w-full bg-white/5 hover:bg-accent-gold hover:text-black border border-border text-center py-3 rounded font-bold uppercase tracking-widest text-xs transition-colors">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="bg-bg-card rounded-2xl border border-accent-gold overflow-hidden flex flex-col shadow-[0_0_20px_rgba(245,166,35,0.15)] transition-transform hover:-translate-y-1 relative md:scale-105 z-10">
+                    <div class="p-6 border-b border-border bg-accent-green/30">
+                        <div class="text-accent-gold text-xs font-bold uppercase tracking-widest mb-2">1h 10MIN</div>
+                        <h3 class="text-2xl font-bold mb-1">Old Town History</h3>
+                        <div class="text-3xl font-bold font-heading">€35<span class="text-sm font-normal text-text-secondary">/person</span></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <p class="text-text-secondary mb-6 flex-grow">Deep dive into 400 years of history. Jordaan, Royal Palace, Anne Frank House, Jewish Quarter, Golden Age canals.</p>
+                        <a href="https://wa.me/31612977991" class="block w-full bg-accent-gold text-black hover:bg-yellow-500 text-center py-3 rounded font-bold uppercase tracking-widest text-xs transition-colors">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-bg-card rounded-2xl border border-border overflow-hidden flex flex-col transition-transform hover:-translate-y-1 hover:border-accent-gold shadow-lg">
+                    <div class="p-6 border-b border-border bg-bg-secondary">
+                        <div class="text-accent-gold text-xs font-bold uppercase tracking-widest mb-2">2h 20MIN</div>
+                        <h3 class="text-2xl font-bold mb-1">Old Town History</h3>
+                        <div class="text-3xl font-bold font-heading">€75<span class="text-sm font-normal text-text-secondary">/person</span></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <p class="text-text-secondary mb-6 flex-grow">The complete historical experience. Every major landmark, full stories, photo stops at every iconic location.</p>
+                        <a href="https://wa.me/31612977991" class="block w-full bg-white/5 hover:bg-accent-gold hover:text-black border border-border text-center py-3 rounded font-bold uppercase tracking-widest text-xs transition-colors">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Historical Landmarks -->
+        <section class="max-w-6xl mx-auto px-6 mb-24 animate-section">
+            <h2 class="text-4xl font-bold font-heading mb-12 text-center">Historical Landmarks Covered</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Landmark 1 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-accent-gold bg-accent-gold/10 p-2 mt-1 rounded-full">🏛️</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Royal Palace</h3>
+                        <p class="text-text-secondary text-sm">On Dam Square (1648)</p>
+                    </div>
+                </div>
+                <!-- Landmark 2 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-accent-gold bg-accent-gold/10 p-2 mt-1 rounded-full">📖</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Anne Frank House</h3>
+                        <p class="text-text-secondary text-sm">& Hiding Place</p>
+                    </div>
+                </div>
+                <!-- Landmark 3 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-accent-gold bg-accent-gold/10 p-2 mt-1 rounded-full">✡️</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Jewish Quarter</h3>
+                        <p class="text-text-secondary text-sm">& Holocaust Memorial</p>
+                    </div>
+                </div>
+                <!-- Landmark 4 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-accent-gold bg-accent-gold/10 p-2 mt-1 rounded-full">🏰</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">In de Waag</h3>
+                        <p class="text-text-secondary text-sm">Medieval City Gate (1488)</p>
+                    </div>
+                </div>
+                <!-- Landmark 5 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-accent-gold bg-accent-gold/10 p-2 mt-1 rounded-full">🎨</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Rembrandt House</h3>
+                        <p class="text-text-secondary text-sm">Museum</p>
+                    </div>
+                </div>
+                <!-- Landmark 6 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-accent-gold bg-accent-gold/10 p-2 mt-1 rounded-full">⛪</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Old Church (Oude Kerk)</h3>
+                        <p class="text-text-secondary text-sm">Oldest building in Amsterdam</p>
+                    </div>
+                </div>
+                <!-- Landmark 7 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-accent-gold bg-accent-gold/10 p-2 mt-1 rounded-full">🌊</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Old Flood Gates</h3>
+                        <p class="text-text-secondary text-sm">17th century canal engineering</p>
+                    </div>
+                </div>
+                <!-- Landmark 8 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-accent-gold bg-accent-gold/10 p-2 mt-1 rounded-full">🛡️</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Begijnhof Courtyard</h3>
+                        <p class="text-text-secondary text-sm">Hidden medieval sanctuary</p>
+                    </div>
+                </div>
+                <!-- Landmark 9 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-accent-gold bg-accent-gold/10 p-2 mt-1 rounded-full">🏘️</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Jordaan Neighbourhood</h3>
+                        <p class="text-text-secondary text-sm">Working class Golden Age</p>
+                    </div>
+                </div>
+                <!-- Landmark 10 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-accent-gold bg-accent-gold/10 p-2 mt-1 rounded-full">🛍️</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Nine Streets</h3>
+                        <p class="text-text-secondary text-sm">De 9 Straatjes</p>
+                    </div>
+                </div>
+                <!-- Landmark 11 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-accent-gold bg-accent-gold/10 p-2 mt-1 rounded-full">⚓</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Ship Museum</h3>
+                        <p class="text-text-secondary text-sm">Dutch maritime Golden Age</p>
+                    </div>
+                </div>
+                <!-- Landmark 12 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-accent-gold bg-accent-gold/10 p-2 mt-1 rounded-full">🌾</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Old Windmill</h3>
+                        <p class="text-text-secondary text-sm">Last remaining in city center</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Facts Cards -->
+        <section class="max-w-6xl mx-auto px-6 mb-24 animate-section">
+            <h2 class="text-3xl font-bold font-heading mb-10 text-center">Fun Amsterdam Facts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Fact 1 -->
+                <div class="bg-bg-secondary border border-border rounded-xl p-6 relative overflow-hidden group">
+                    <div class="text-4xl absolute -right-4 -top-4 opacity-10 group-hover:opacity-20 transition-opacity">🌉</div>
+                    <p class="font-medium text-lg leading-snug">Amsterdam has 165 canals and 1,500+ bridges</p>
+                </div>
+                <!-- Fact 2 -->
+                <div class="bg-bg-secondary border border-border rounded-xl p-6 relative overflow-hidden group">
+                    <div class="text-4xl absolute -right-4 -top-4 opacity-10 group-hover:opacity-20 transition-opacity">🪵</div>
+                    <p class="font-medium text-lg leading-snug">The city was built on 11 million wooden poles</p>
+                </div>
+                <!-- Fact 3 -->
+                <div class="bg-bg-secondary border border-border rounded-xl p-6 relative overflow-hidden group">
+                    <div class="text-4xl absolute -right-4 -top-4 opacity-10 group-hover:opacity-20 transition-opacity">💰</div>
+                    <p class="font-medium text-lg leading-snug">Amsterdam's Golden Age (1600s) made it richest city on earth</p>
+                </div>
+                <!-- Fact 4 -->
+                <div class="bg-bg-secondary border border-border rounded-xl p-6 relative overflow-hidden group">
+                    <div class="text-4xl absolute -right-4 -top-4 opacity-10 group-hover:opacity-20 transition-opacity">🤫</div>
+                    <p class="font-medium text-lg leading-snug">Anne Frank hid for 761 days in a secret annex</p>
+                </div>
+                <!-- Fact 5 -->
+                <div class="bg-bg-secondary border border-border rounded-xl p-6 relative overflow-hidden group">
+                    <div class="text-4xl absolute -right-4 -top-4 opacity-10 group-hover:opacity-20 transition-opacity">🏰</div>
+                    <p class="font-medium text-lg leading-snug">In de Waag was built in 1488 as a city gate</p>
+                </div>
+                <!-- Fact 6 -->
+                <div class="bg-bg-secondary border border-border rounded-xl p-6 relative overflow-hidden group">
+                    <div class="text-4xl absolute -right-4 -top-4 opacity-10 group-hover:opacity-20 transition-opacity">🎨</div>
+                    <p class="font-medium text-lg leading-snug">Rembrandt went bankrupt and died poor in Amsterdam</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Two Columns: Included & Reviews -->
+        <section class="max-w-6xl mx-auto px-6 mb-24 animate-section">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Always Included -->
+                <div class="bg-accent-green border border-[#255c45] rounded-2xl p-8 md:p-10 shadow-lg">
+                    <h2 class="text-3xl font-bold font-heading mb-8 text-text-primary">Always Included</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <span class="text-accent-gold bg-accent-gold/20 p-1.5 rounded-full text-xs">✔</span>
+                            <span class="font-medium text-text-primary">Hotel pickup + dropoff free</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-accent-gold bg-accent-gold/20 p-1.5 rounded-full text-xs">✔</span>
+                            <span class="font-medium text-text-primary">Detailed route map</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-accent-gold bg-accent-gold/20 p-1.5 rounded-full text-xs">✔</span>
+                            <span class="font-medium text-text-primary">Rain curtains on every rickshaw</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-accent-gold bg-accent-gold/20 p-1.5 rounded-full text-xs">✔</span>
+                            <span class="font-medium text-text-primary">Safety belts + passenger insurance</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-accent-gold bg-accent-gold/20 p-1.5 rounded-full text-xs">✔</span>
+                            <span class="font-medium text-text-primary">10-min bonus on every 30 min booked</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-accent-gold bg-accent-gold/20 p-1.5 rounded-full text-xs">✔</span>
+                            <span class="font-medium text-text-primary">Guide speaks English + Dutch</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Reviews -->
+                <div class="flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold font-heading mb-8">Rider Stories</h2>
+                    <div class="space-y-6">
+                        <div class="bg-bg-card border border-white/5 p-6 rounded-xl relative">
+                            <div class="text-accent-gold text-sm mb-2">★★★★★</div>
+                            <p class="text-text-secondary italic mb-3 text-sm">"The history tour was so interesting. Alex gave us the oldest map of Amsterdam that one can imagine."</p>
+                            <div class="font-bold text-text-primary text-xs uppercase tracking-widest">— Manar & Ali, Dubai</div>
+                        </div>
+                        <div class="bg-bg-card border border-white/5 p-6 rounded-xl relative">
+                            <div class="text-accent-gold text-sm mb-2">★★★★★</div>
+                            <p class="text-text-secondary italic mb-3 text-sm">"My sister and I had only 4 hours in Amsterdam. Loved the quick service and history tour."</p>
+                            <div class="font-bold text-text-primary text-xs uppercase tracking-widest">— Sarah J., Canada</div>
+                        </div>
+                        <div class="bg-bg-card border border-white/5 p-6 rounded-xl relative">
+                            <div class="text-accent-gold text-sm mb-2">★★★★★</div>
+                            <p class="text-text-secondary italic mb-3 text-sm">"The Bike Taxi city tour was incredible! Our guide showed us hidden landmarks we would have missed."</p>
+                            <div class="font-bold text-text-primary text-xs uppercase tracking-widest">— Janny, Business Visit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="max-w-4xl mx-auto px-6 text-center animate-section pb-12">
+            <h2 class="text-4xl font-bold font-heading mb-4 leading-tight">Ready to Explore Amsterdam's History?</h2>
+            <p class="text-xl text-accent-gold mb-10 font-medium">Starting from €25 per person.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/31612977991" class="bg-accent-gold hover:bg-yellow-500 text-black px-10 py-4 rounded font-bold uppercase tracking-widest text-center transition-colors shadow-lg">Book Now →</a>
+                <a href="https://wa.me/31612977991" class="flex items-center justify-center gap-3 bg-accent-green text-black hover:bg-[#20bd5a] px-10 py-4 rounded font-bold uppercase tracking-widest text-center transition-colors shadow-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-2.32 0-4.591 1.255-4.591 3.945 0 1.154.338 2.304 1.04 3.123l-1.003 3.656 3.748-0.982c.772.419 1.629.641 2.504.641 2.32 0 4.591-1.255 4.591-3.945 0-2.689-2.27-3.938-4.289-3.938zm3.62 5.92c-.06.18-.323.33-.513.353-.18.02-.41.033-.673-.053-.33-.11-.75-.28-1.21-.49-.86-.38-1.41-1.25-1.45-1.3-.04-.05-.33-.44-.33-.84s.21-.6.28-.68c.07-.08.16-.1.21-.1s.11 0 .16.01c.05 0 .12-.02.19.14.07.16.24.58.26.63s.03.11 0 .16c-.03.05-.05.11-.12.2-.07.09-.15.2-.21.27-.07.08-.14.17-.06.31.08.14.35.58.75.94.51.45.94.59 1.08.66.14.07.22.06.3-.03.08-.09.34-.39.43-.53.09-.14.18-.12.3-.08s.77.36.9.43c.13.07.22.1.25.15.03.05.03.29-.07.47z"/></svg>
+                    WhatsApp
+                </a>
+            </div>
+            <p class="text-sm text-text-muted mt-6 font-medium">Pay after the tour — no prepayment stress.</p>
+        </section>
+
+    </main>
+
+        <!-- Footer -->
+    <footer class="bg-[#0f1f15] border-t border-accent-gold/20 pt-20 pb-8 relative overflow-hidden text-gray-300">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-green/5 rounded-full blur-[100px] -z-10 transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent-gold/5 rounded-full blur-[120px] -z-10 transform -translate-x-1/2 translate-y-1/3 pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 border-b border-white/10 pb-16 mb-8 relative z-10">
+            <!-- Brand Section -->
+            <div class="flex flex-col">
+                <div class="text-2xl font-bold tracking-tight text-white flex items-center gap-3 mb-6 group cursor-pointer" onclick="window.location.href='index.html'">
+                    <span class="text-3xl group-hover:scale-110 transition-transform duration-300">🛺</span>
+                    <span class="font-heading text-xl tracking-wider group-hover:text-accent-gold transition-colors duration-300 text-white">AMSTERDAM BIKE TAXI</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm">
+                    Experience Amsterdam the green way. We provide premium, eco-friendly rickshaw tours and taxi services, creating unforgettable memories since 2024. Zero emissions, maximum charm.
+                </p>
+                <!-- Social Links -->
+                <div class="flex items-center gap-4">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#1877F2] hover:text-white hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-[#1877F2]/30">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/amsterdambiketaxi" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-[#dc2743]/30">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://wa.me/31612977991" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#25D366] hover:text-white hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-[#25D366]/30">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-2.32 0-4.591 1.255-4.591 3.945 0 1.154.338 2.304 1.04 3.123l-1.003 3.656 3.748-0.982c.772.419 1.629.641 2.504.641 2.32 0 4.591-1.255 4.591-3.945 0-2.689-2.27-3.938-4.289-3.938zm3.62 5.92c-.06.18-.323.33-.513.353-.18.02-.41.033-.673-.053-.33-.11-.75-.28-1.21-.49-.86-.38-1.41-1.25-1.45-1.3-.04-.05-.33-.44-.33-.84s.21-.6.28-.68c.07-.08.16-.1.21-.1s.11 0 .16.01c.05 0 .12-.02.19.14.07.16.24.58.26.63s.03.11 0 .16c-.03.05-.05.11-.12.2-.07.09-.15.2-.21.27-.07.08-.14.17-.06.31.08.14.35.58.75.94.51.45.94.59 1.08.66.14.07.22.06.3-.03.08-.09.34-.39.43-.53.09-.14.18-.12.3-.08s.77.36.9.43c.13.07.22.1.25.15.03.05.03.29-.07.47z"/></svg>
+                    </a>
+                </div>
+                
+                                <!-- Trust Badges -->
+                <div class="mt-8 flex flex-wrap items-center gap-4">
+                    <div class="flex flex-col gap-1 items-center bg-white/5 border border-white/10 rounded-lg py-2 px-3 hover:bg-white/10 transition-colors shadow-lg hover:shadow-accent-gold/10">
+                        <div class="text-accent-gold text-[10px] tracking-widest font-black flex gap-[2px]">
+                            <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-white/90">Top Rated</span>
+                    </div>
+                    <div class="flex flex-col gap-1 items-center bg-white/5 border border-white/10 rounded-lg py-2 px-3 hover:bg-white/10 transition-colors shadow-lg hover:shadow-accent-green/10">
+                        <div class="text-accent-green text-[10px] flex items-center">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-white/90">Eco-Certified</span>
+                    </div>
+                    <div class="flex flex-col gap-1 items-center bg-white/5 border border-white/10 rounded-lg py-2 px-3 hover:bg-white/10 transition-colors shadow-lg hover:shadow-[#ca4848]/10">
+                        <div class="text-[#ca4848] text-[10px]">
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        </div>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-white/90">Local Team</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="lg:ml-auto md:-ml-8 lg:ml-0">
+                <h4 class="font-bold uppercase tracking-widest text-sm mb-6 text-white flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-gold"></span> Explore
+                </h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="index.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Home</a></li>
+                    <li><a href="tours.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">All Tours</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Services</a></li>
+                    <li><a href="gallery.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Gallery</a></li>
+                    <li><a href="blog.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Blog / News</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">About Us</a></li>
+                    <li class="pt-2"><a href="app.html" class="inline-flex items-center gap-2 text-accent-green hover:text-white font-medium hover:translate-x-1 transition-all duration-300 group"><svg class="w-4 h-4 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg> Download User App</a></li>
+                </ul>
+            </div>
+
+            <!-- Top Tours -->
+            <div>
+                <h4 class="font-bold uppercase tracking-widest text-sm mb-6 text-white flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-green"></span> Popular Rides
+                </h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="historical-center.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Historical Center Tour</a></li>
+                    <li><a href="romantic-tours.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Romantic Evening Ride</a></li>
+                    <li><a href="city-tours.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">City Highlights</a></li>
+                    <li><a href="tours.html#prices" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Group Custom Tours</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Wedding Services</a></li>
+                    <li><a href="gallery.html" class="hover:text-accent-gold transition-colors block py-2 min-h-[44px]">Gallery</a>
+            <a href="our-network.html" class="text-gray-400 hover:text-accent-gold hover:translate-x-2 flex items-center gap-2 transition-all duration-300 before:content-[''] before:w-0 before:h-[1px] before:bg-accent-gold hover:before:w-3 before:transition-all before:duration-300">Become a Driver</a></li>
+                    <li class="pt-2"><a href="tours.html#prices" class="inline-block px-5 py-2 mt-2 border border-accent-gold/40 text-accent-gold rounded hover:bg-accent-gold hover:text-[#111111] transition-all duration-300 shadow-[0_0_15px_rgba(229,192,123,0.1)] hover:shadow-[0_0_20px_rgba(229,192,123,0.4)] text-xs font-bold uppercase tracking-wider">Book Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-bold uppercase tracking-widest text-sm mb-6 text-white flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-gold"></span> Get in Touch
+                </h4>
+                <ul class="space-y-5 text-sm mb-8 text-gray-400">
+                    <li>
+                        <a href="https://maps.google.com/?q=Koningsplein+7-9,+1017+BB+Amsterdam" target="_blank" rel="noopener noreferrer" class="flex gap-4 hover:text-white transition-colors duration-300 group">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-accent-gold group-hover:bg-accent-gold group-hover:text-[#0f1f15] transition-all duration-300 shrink-0">📍</div>
+                            <span class="leading-relaxed block pt-1">Koningsplein 7-9, 1017 BB<br>Amsterdam, Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+31612977991" class="flex items-center gap-4 hover:text-white transition-colors duration-300 group">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-accent-gold group-hover:bg-accent-gold group-hover:text-[#0f1f15] transition-all duration-300 shrink-0">📞</div>
+                            <span class="font-medium text-white group-hover:text-accent-gold transition-colors">+31 612 977 991</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:Amsterdam.Rickshaw.tours@gmail.com" class="flex items-center gap-4 hover:text-white transition-colors duration-300 group">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-accent-gold group-hover:bg-accent-gold group-hover:text-[#0f1f15] transition-all duration-300 shrink-0">📧</div>
+                            <span class="break-all font-medium pt-1">Amsterdam.Rickshaw.tours<br>@gmail.com</span>
+                        </a>
+                    </li>
+                    <li class="flex items-center gap-4 group hover:text-white transition-colors duration-300">
+                        <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-accent-green group-hover:bg-accent-green group-hover:text-white transition-all duration-300 shrink-0">🕐</div>
+                        <span class="pt-1">Mon–Sun: 8:00 AM – 6:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="border-t border-white/5 mt-4">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500 relative z-10 py-6">
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left">
+                    <p>&copy; <span id="current-year"></span> Amsterdam Bike Taxi. All rights reserved.</p>
+                    <span class="hidden md:inline text-white/10">|</span>
+                    <p class="flex items-center gap-1">Designed with <span class="text-accent-gold text-lg leading-none animate-pulse">&hearts;</span></p>
+                </div>
+                <div class="flex gap-6 font-medium">
+                    <a href="gallery.html" class="hover:text-accent-gold transition-colors duration-300">Gallery</a>
+                    <a href="privacy-policy.html" class="hover:text-accent-gold transition-colors duration-300">Privacy Policy</a>
+                    <a href="privacy-policy.html" class="hover:text-accent-gold transition-colors duration-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/31612977991" class="fixed bottom-6 right-6 w-14 h-14 bg-accent-green rounded-full flex items-center justify-center shadow-xl shadow-[#1B4332]/40 z-50 pulsing">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-2.32 0-4.591 1.255-4.591 3.945 0 1.154.338 2.304 1.04 3.123l-1.003 3.656 3.748-0.982c.772.419 1.629.641 2.504.641 2.32 0 4.591-1.255 4.591-3.945 0-2.689-2.27-3.938-4.289-3.938zm3.62 5.92c-.06.18-.323.33-.513.353-.18.02-.41.033-.673-.053-.33-.11-.75-.28-1.21-.49-.86-.38-1.41-1.25-1.45-1.3-.04-.05-.33-.44-.33-.84s.21-.6.28-.68c.07-.08.16-.1.21-.1s.11 0 .16.01c.05 0 .12-.02.19.14.07.16.24.58.26.63s.03.11 0 .16c-.03.05-.05.11-.12.2-.07.09-.15.2-.21.27-.07.08-.14.17-.06.31.08.14.35.58.75.94.51.45.94.59 1.08.66.14.07.22.06.3-.03.08-.09.34-.39.43-.53.09-.14.18-.12.3-.08s.77.36.9.43c.13.07.22.1.25.15.03.05.03.29-.07.47z"/></svg>
+    </a>
+
+    <script src="/script.js"></script>
+</body>
+</html>
