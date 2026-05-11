@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Amsterdam Bike Taxi</title>
+    <title>Book a Tour | Amsterdam Bike Taxi Services</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/animations.css">
+    <meta name="description" content="Book your Amsterdam bike taxi tour online. 12 tour packages from €12. City tours, romantic canal rides, accessible tours and full day experiences.">
+    <link rel="canonical" href="https://amsterdam-bike-taxi.com/services">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Amsterdam Bike Taxi",
+      "image": "https://amsterdam-bike-taxi.com/wp-content/uploads/2026/04/photo_2_2025-07-10_18-48-32-1.webp",
+      "url": "https://amsterdam-bike-taxi.com",
+      "telephone": "+31612977991",
+      "email": "Amsterdam.Rickshaw.tours@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Koningsplein 7-9",
+        "addressLocality": "Amsterdam",
+        "postalCode": "1017 BB",
+        "addressCountry": "NL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.3676,
+        "longitude": 4.8945
+      },
+      "openingHours": "Mo-Su 08:00-18:00",
+      "priceRange": "€12-€230",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "856"
+      }
+    }
+    </script>
 </head>
 <body class="bg-bg-primary text-text-primary antialiased">
 
@@ -240,8 +272,9 @@
                                     }
 
                                     const submitBtn = document.getElementById("submitBtn");
+                                    const originalBtnText = submitBtn ? submitBtn.innerText : "Confirm Booking";
                                     if (submitBtn) {
-                                        submitBtn.textContent = "Sending...";
+                                        submitBtn.innerHTML = `<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-current inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Sending...`;
                                         submitBtn.classList.add("opacity-70", "cursor-not-allowed");
                                         submitBtn.disabled = true;
                                     }
@@ -262,7 +295,7 @@
                                             </div>`;
                                         } else {
                                             if (submitBtn) {
-                                                submitBtn.textContent = "Confirm Booking";
+                                                submitBtn.innerText = originalBtnText;
                                                 submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
                                                 submitBtn.disabled = false;
                                             }
@@ -270,7 +303,7 @@
                                         }
                                     }).catch(error => {
                                         if (submitBtn) {
-                                            submitBtn.textContent = "Confirm Booking";
+                                            submitBtn.innerText = originalBtnText;
                                             submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
                                             submitBtn.disabled = false;
                                         }
@@ -300,7 +333,7 @@
                     <span class="font-heading text-xl tracking-wider group-hover:text-accent-gold transition-colors duration-300 text-white">AMSTERDAM BIKE TAXI</span>
                 </div>
                 <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm">
-                    Experience Amsterdam the green way. We provide premium, eco-friendly rickshaw tours and taxi services, creating unforgettable memories since 2024. Zero emissions, maximum charm.
+                    Experience Amsterdam the green way. We provide premium, eco-friendly rickshaw tours and taxi services, creating unforgettable memories since 2021. Zero emissions, maximum charm.
                 </p>
                 <!-- Social Links -->
                 <div class="flex items-center gap-4">
